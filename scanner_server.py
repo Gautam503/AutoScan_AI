@@ -7,10 +7,9 @@ host = "0.0.0.0"  # Accept connection from any IP
 port = 6101       # Port to listen for scanner data
 
 # --- SAP Configuration ---
-SAP_URL = "https://sap.company.com/api/engine"  # Replace with your actual SAP API URL
-SAP_USERNAME = "your_sap_user"                  # Replace with actual SAP username
-SAP_PASSWORD = "your_sap_password"              # Replace with actual SAP password
-
+SAP_URL = "https://sap.company.com/api/engine"  
+SAP_USERNAME = "your_sap_user"                  
+SAP_PASSWORD = "your_sap_password"              
 # --- Add prefix and suffix to scanned data ---
 def process_barcode(data):
     prefix = "GN-"
@@ -20,7 +19,7 @@ def process_barcode(data):
 # --- Send the modified barcode to SAP ---
 def send_to_sap(modified_data):
     payload = {
-        "engine_number": modified_data  # Change the key as per SAP API
+        "engine_number": modified_data 
     }
 
     try:
